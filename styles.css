@@ -1,0 +1,289 @@
+/* Estilos para a Página Index */
+body.index-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/background.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden; /* Remove a rolagem */
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.card-check {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-card {
+    width: calc(100% - 40px);
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.input-card::after {
+    content: '\2630'; /* Unicode para o ícone de menu hambúrguer */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.button-group {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.nacional {
+    background-color: #33cab9;
+    color: white;
+}
+
+.btn.internacional {
+    background-color: #00254a;
+    color: white;
+}
+
+.verify-btn {
+    width: 100%;
+    padding: 20px;
+    background-color: white; /* Cor de fundo padrão (branco) */
+    color: #00254a; /* Cor do texto padrão (azul) */
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Adiciona transição para a cor do texto e de fundo */
+}
+
+.verify-btn:hover {
+    background-color: #e7e7e7; /* Cor de fundo cinza claro ao passar o mouse */
+    color: #a5a5a5; /* Cor do texto cinza claro ao passar o mouse */
+}
+
+/* Estilos para a Segunda Página */
+body.users_pages {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url('img/background2.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden; /* Remove a rolagem */
+}
+
+/* Barra de Navegação Superior */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px 10px; /* Reduz o padding superior e inferior */
+    background-color: #0a1525;
+    color: white;
+    position: relative;
+    height: 10px; /* Define uma altura menor para a barra de navegação */
+}
+
+.nav-bar .back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal; /* Corrige o peso da fonte */
+    position: absolute;
+    left: 20px; /* Espaço à esquerda para o botão */
+    top: 50%; /* Centraliza verticalmente dentro da barra */
+    transform: translateY(-50%); /* Ajusta o texto verticalmente */
+}
+
+.nav-bar h1 {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente dentro da barra */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto horizontal e verticalmente */
+}
+
+
+/* Conteúdo Principal */
+.student-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: px 0;
+    overflow: hidden;
+    background-color: transparent; /* Mantém o fundo transparente para mostrar a imagem de fundo */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.student-photo {
+    position: relative;
+    margin-top: 10px; /* Desce a foto do usuário em 5px */
+    margin-bottom: 10px;
+}
+
+.student-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.serial-info {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.serial-info h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.serial-info p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Detalhes do Estudante */
+.details {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    color: #445574;
+    position: absolute;
+    top: 235px; /* Mantém o contêiner branco na mesma posição */
+    bottom: 80px; /* Mantém o espaço para a barra inferior */
+    left: 0;
+    right: 0;
+    overflow-y: auto; /* Permite rolagem se o conteúdo for muito longo */
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Ajuste do Texto */
+.details p, .details span {
+    margin-top: -5px; /* Subir o texto em 5px */
+    font-size: 16px; /* Define o tamanho da fonte para 16px */
+}
+
+/* Ajustes para tornar o conteúdo responsivo */
+@media (max-height: 600px) {
+    .student-photo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .serial-info h2 {
+        font-size: 16px;
+    }
+    
+    .serial-info p {
+        font-size: 14px;
+    }
+    
+    .details {
+        top: 180px;
+    }
+}
+
+/* Barra de Navegação Inferior */
+.bottom-bar {
+    background-color: #0a1525;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Altere para 'fixed' para que a barra inferior permaneça fixa no fundo */
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.wallet-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alinha o texto abaixo do ícone */
+    align-items: center;
+    justify-content: center;
+}
+
+.wallet-button img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1px; /* Espaçamento entre o ícone e o texto */
+    filter: invert(100%); /* Torna o ícone branco */
+}
+
+/* Estilo para o link da carteira */
+.wallet-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Alinha o texto abaixo do ícone */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove o sublinhado */
+}
